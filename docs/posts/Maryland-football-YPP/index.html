@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -172,43 +138,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>football_logs <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://thescoop.org/sports-data-files/footballlogs1525.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>winlosslogs <span class="ot">&lt;-</span> football_logs <span class="sc">|&gt;</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">wins =</span> <span class="fu">case_when</span>(</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">grepl</span>(<span class="st">"W"</span>, Outcome) <span class="sc">~</span> <span class="dv">1</span>, </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">grepl</span>(<span class="st">"L"</span>, Outcome) <span class="sc">~</span> <span class="dv">0</span>)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>winlosslogs <span class="sc">|&gt;</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Team, Season) <span class="sc">|&gt;</span> </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">OffensivePlays =</span> <span class="fu">sum</span>(TotalPlays), </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">OffensiveYards =</span> <span class="fu">sum</span>(TotalYds), </span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">DefensivePlays =</span> <span class="fu">sum</span>(DefTotalPlays), </span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">DefensiveYards =</span> <span class="fu">sum</span>(DefTotalYds), </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">TotalWins =</span> <span class="fu">sum</span>(wins)) <span class="sc">|&gt;</span> </span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">OffensiveYPP =</span> OffensiveYards<span class="sc">/</span>OffensivePlays, </span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">DefensiveYPP =</span> DefensiveYards<span class="sc">/</span>DefensivePlays) <span class="ot">-&gt;</span> ypp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>umd <span class="ot">&lt;-</span> ypp <span class="sc">|&gt;</span> <span class="fu">filter</span>(Team <span class="sc">==</span> <span class="st">"Maryland"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ypp <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">offense =</span> <span class="fu">mean</span>(OffensiveYPP), </span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">defense =</span> <span class="fu">mean</span>(DefensiveYPP)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
   offense defense
@@ -216,29 +145,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 1    5.76    5.63</code></pre>
 </div>
 </div>
-<pre class="{r]}"><code>ggplot() + 
-  geom_point(
-    data=ypp, 
-    aes(x=OffensiveYPP, y=DefensiveYPP, size=TotalWins), 
-    color="grey", 
-    alpha=.5) + 
-  geom_point(
-    data=umd, 
-    aes(x=OffensiveYPP, y=DefensiveYPP, size=TotalWins), 
-    color="red") + 
-  geom_vline(xintercept = 5.762959) + 
-  geom_hline(yintercept = 5.627613) +
-  geom_text_repel(
-    data=umd, 
-    aes(x=OffensiveYPP, y=DefensiveYPP, label=Season)
-  ) +
-  labs(title="Malik Washington may not be the key to saving Maryland football", subtitle="The Terps' offense is having one of their worst seasons since 2015 despite the strong defensive display", caption="Source: NCAA | By Dylan Schmidt")  + theme_minimal() + 
-  theme(
-    plot.title = element_text(size = 16, face = "bold"),
-    axis.title = element_text(size = 8), 
-    plot.subtitle = element_text(size=10), 
-    panel.grid.minor = element_blank()
-    )</code></pre>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>Malik Washington — the nation’s fifth-ranked quarterback in the class of 2025 — was expected to be head coach Michael Locksley’s prized possession that helped put Maryland football back on the map. After Taulia Tagovailoa graduated in 2023 and the Terps underwent a rebuilding season in 2024, expectations were high for the true freshman quarterback heading into the 2025 campaign.</p>
 <p>Through the first four games, he didn’t disappoint. Washington threw for 1,038 yards and eight passing touchdowns while also adding two rushing scores. Maryland went into its first bye week still unbeaten and with reason for optimism ahead of the meat of its Big Ten schedule.</p>
 <p>But it’s quickly spiraled out. The Terps are on a four-game losing streak and their chances of bowl eligibility have gotten slimmer and slimmer every week. Washington has thrown four picks and fumbled once during this rough stretch, including a three-turnover performance against Indiana.</p>
