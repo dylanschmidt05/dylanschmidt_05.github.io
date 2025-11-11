@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "sportsblog",
     "section": "",
-    "text": "Comparing the last 11 seasons of Maryland football\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBig Ten CFB Avg Plays\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow successful are third and six runs versus in the air\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow successful are third and six runs versus in the air\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaryland volleyball point comparision to Nebraska\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPenn State has overcome some lackluster rushing performances over the last decade\n\n\n\n\n\n\n\n\n\n\n\nOct 28, 2025\n\n\nDylan Schmidt\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nOct 9, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nMen’s soccer international players\n\n\n\n\n\n\n\n\n\n\n\nOct 9, 2025\n\n\nDylan Schmidt\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Comparing the last 11 seasons of Maryland football\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBig Ten CFB Avg Plays\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing NFL teams EPA from week 3 of the 2022 season to week 9\n\n\n\n\n\n\n\n\n\n\n\nDylan Schmidt\n\n\n\n\n\n\n\n\n\n\n\n\nHow successful are third and six runs versus in the air\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow successful are third and six runs versus in the air\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaryland volleyball point comparision to Nebraska\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPenn State has overcome some lackluster rushing performances over the last decade\n\n\n\n\n\n\n\n\n\n\n\nOct 28, 2025\n\n\nDylan Schmidt\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nOct 9, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nMen’s soccer international players\n\n\n\n\n\n\n\n\n\n\n\nOct 9, 2025\n\n\nDylan Schmidt\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/first-post/index.html",
@@ -145,5 +145,75 @@
     "title": "Comparing the last 11 seasons of Maryland football",
     "section": "",
     "text": "# A tibble: 1 × 2\n  offense defense\n    &lt;dbl&gt;   &lt;dbl&gt;\n1    5.76    5.63\n\n\n\n\n\n\n\n\n\n\n\nMalik Washington — the nation’s fifth-ranked quarterback in the class of 2025 — was expected to be head coach Michael Locksley’s prized possession that helped put Maryland football back on the map. After Taulia Tagovailoa graduated in 2023 and the Terps underwent a rebuilding season in 2024, expectations were high for the true freshman quarterback heading into the 2025 campaign.\nThrough the first four games, he didn’t disappoint. Washington threw for 1,038 yards and eight passing touchdowns while also adding two rushing scores. Maryland went into its first bye week still unbeaten and with reason for optimism ahead of the meat of its Big Ten schedule.\nBut it’s quickly spiraled out. The Terps are on a four-game losing streak and their chances of bowl eligibility have gotten slimmer and slimmer every week. Washington has thrown four picks and fumbled once during this rough stretch, including a three-turnover performance against Indiana.\nA big part of Maryland’s losing streak has been its poor offensive performances. While the Terps’ defense has been solid throughout the season — they have allowed the third-fewest yards per play of any Maryland team over the last 11 seasons — the offense has been scuffling. Maryland’s offense was expected to take a step forward this season, but it has produced the program’s second-fewest yards per play since 2015. Some of these struggles can be attributed to Washington only being a freshman, but with Locksley under pressure and in desperate need of a win, the Terps will have to quickly right the ship in the final four games."
+  },
+  {
+    "objectID": "posts/NFL-Redzone-EPA/index.html",
+    "href": "posts/NFL-Redzone-EPA/index.html",
+    "title": "Comparing NFL teams EPA from week 3 of the 2022 season to week 9",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(nflreadr)\nlibrary(ggalt)\n\nRegistered S3 methods overwritten by 'ggalt':\n  method                  from   \n  grid.draw.absoluteGrob  ggplot2\n  grobHeight.absoluteGrob ggplot2\n  grobWidth.absoluteGrob  ggplot2\n  grobX.absoluteGrob      ggplot2\n  grobY.absoluteGrob      ggplot2"
+  },
+  {
+    "objectID": "posts/NFL-Redzone-EPA/index.html#loading-the-tidyverse-nflreadr-and-ggalt",
+    "href": "posts/NFL-Redzone-EPA/index.html#loading-the-tidyverse-nflreadr-and-ggalt",
+    "title": "Comparing NFL teams EPA from week 3 of the 2022 season to week 9",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(nflreadr)\nlibrary(ggalt)\n\nRegistered S3 methods overwritten by 'ggalt':\n  method                  from   \n  grid.draw.absoluteGrob  ggplot2\n  grobHeight.absoluteGrob ggplot2\n  grobWidth.absoluteGrob  ggplot2\n  grobX.absoluteGrob      ggplot2\n  grobY.absoluteGrob      ggplot2"
+  },
+  {
+    "objectID": "posts/NFL-Redzone-EPA/index.html#loading-the-data",
+    "href": "posts/NFL-Redzone-EPA/index.html#loading-the-data",
+    "title": "Comparing NFL teams EPA from week 3 of the 2022 season to week 9",
+    "section": "Loading the data",
+    "text": "Loading the data\n\nnfl_data_2022 &lt;- load_pbp(2022)"
+  },
+  {
+    "objectID": "posts/NFL-Redzone-EPA/index.html#dolphins-plays-inside-redzone-during-first-three-weeks",
+    "href": "posts/NFL-Redzone-EPA/index.html#dolphins-plays-inside-redzone-during-first-three-weeks",
+    "title": "Comparing NFL teams EPA from week 3 of the 2022 season to week 9",
+    "section": "Dolphins plays inside redzone during first three weeks",
+    "text": "Dolphins plays inside redzone during first three weeks\n\ndolphins_redzone_data &lt;- nfl_data_2022 |&gt; \n  filter(posteam == \"MIA\" & yardline_100 &lt; 21 & week &lt; 4) |&gt; \n  filter (play_type == \"pass\" | play_type == \"run\")\n\ndolphins_total &lt;- dolphins_redzone_data |&gt; \n  summarise (\n    total = n()\n  )\n\nepa_total &lt;- dolphins_redzone_data |&gt; \n  summarise(\n    total_epa = sum(epa)\n  )"
+  },
+  {
+    "objectID": "posts/NFL-Redzone-EPA/index.html#dolphins-total-epa-during-2022-season",
+    "href": "posts/NFL-Redzone-EPA/index.html#dolphins-total-epa-during-2022-season",
+    "title": "Comparing NFL teams EPA from week 3 of the 2022 season to week 9",
+    "section": "Dolphins total epa during 2022 season",
+    "text": "Dolphins total epa during 2022 season\n\ndolphins_redzone_season &lt;- nfl_data_2022 |&gt; \n  filter(posteam == \"MIA\" & yardline_100 &lt; 21) |&gt; \n  filter (play_type == \"pass\" | play_type == \"run\") |&gt; \n  summarise(\n    total_epa = sum(epa)\n  )\n\nThe Dolphins’ total epa on plays inside the redzone from all of the 2022 season is higher than just the first three weeks. That number rises from just over 9 to nearly 13 when you factor in the over 3,000 redzone plays throughout the season."
+  },
+  {
+    "objectID": "posts/NFL-Redzone-EPA/index.html#comparing-nfls-teams-epa-from-week-3-to-week-9",
+    "href": "posts/NFL-Redzone-EPA/index.html#comparing-nfls-teams-epa-from-week-3-to-week-9",
+    "title": "Comparing NFL teams EPA from week 3 of the 2022 season to week 9",
+    "section": "Comparing nfl’s teams epa from week 3 to week 9",
+    "text": "Comparing nfl’s teams epa from week 3 to week 9\n\nplays_week3 &lt;- nfl_data_2022 |&gt; \n  filter(yardline_100 &lt; 21 & week &lt; 4) |&gt; \n  filter (play_type == \"pass\" | play_type == \"run\") |&gt; \n  group_by(posteam)\n\nnfl_teams_plays_week3 &lt;- plays_week3 |&gt; \n  summarise (\n    total_plays_week3 = n()\n  )\n\nepa_week3 &lt;- plays_week3 |&gt; \n  summarise(\n    total_epa_week3 = sum(epa)\n  )\n\nplays_week9 &lt;- nfl_data_2022 |&gt; \n  filter(yardline_100 &lt; 21 & week &lt; 10) |&gt; \n  filter (play_type == \"pass\" | play_type == \"run\") |&gt; \n  group_by(posteam)\n\nnfl_teams_plays_week9 &lt;- plays_week9 |&gt; \n  summarise (\n    total_plays_week9 = n()\n  )\n\nepa_week9 &lt;- plays_week9 |&gt; \n  summarise(\n    total_epa_week9 = sum(epa)\n  )"
+  },
+  {
+    "objectID": "posts/NFL-Redzone-EPA/index.html#joining-the-two-dataframes",
+    "href": "posts/NFL-Redzone-EPA/index.html#joining-the-two-dataframes",
+    "title": "Comparing NFL teams EPA from week 3 of the 2022 season to week 9",
+    "section": "Joining the two dataframes",
+    "text": "Joining the two dataframes\n\nrz_joined &lt;- full_join(epa_week3, epa_week9, by = \"posteam\")"
+  },
+  {
+    "objectID": "posts/NFL-Redzone-EPA/index.html#making-a-dumbbell-chart",
+    "href": "posts/NFL-Redzone-EPA/index.html#making-a-dumbbell-chart",
+    "title": "Comparing NFL teams EPA from week 3 of the 2022 season to week 9",
+    "section": "Making a dumbbell chart",
+    "text": "Making a dumbbell chart\n\nggplot() + \n  geom_dumbbell(\n    data=rz_joined, \n    aes(y=reorder(posteam, total_epa_week9), x=total_epa_week3, xend=total_epa_week9),\n    linewidth = 1,\n    color = \"grey\",\n    colour_x = \"green\",\n    colour_xend = \"blue\") + \n  theme_minimal() +\n  labs(title = \"The Kansas City Chiefs lead the NFL in epa through nine weeks\", y=\"team\", subtitle = \"The Philadelphia Eagles had the biggest jump from week 3 to week 9, going from 0 epa to over 20\")\n\nWarning in geom_dumbbell(data = rz_joined, aes(y = reorder(posteam,\ntotal_epa_week9), : Ignoring unknown parameters: `linewidth`\n\n\nWarning: Using the `size` aesthetic with geom_segment was deprecated in ggplot2 3.4.0.\nℹ Please use the `linewidth` aesthetic instead."
+  },
+  {
+    "objectID": "posts/NFL-Redzone-EPA/index.html#process",
+    "href": "posts/NFL-Redzone-EPA/index.html#process",
+    "title": "Comparing NFL teams EPA from week 3 of the 2022 season to week 9",
+    "section": "Process",
+    "text": "Process\nTo replicate the ESPN analysis of red zone success, I used the nflreadr package to load NFL play-by-play data and focused on all offensive plays that occurred inside the opponent’s 20-yard line (yardline_100 &lt; 21). Plays such as penalties, kneel-downs, and spikes were excluded to ensure only true offensive plays contributed to expected points added (EPA).\nFor each team, I calculated total red zone plays and total EPA through Week 3 and then through Week 9 of the 2025 season. These summaries were joined and visualized using a dumbbell chart — each line shows how a team’s total red zone EPA has changed over that span, with green points representing Week 3 and blue points representing Week 9. Teams are ordered by their total Week 9 EPA to highlight overall performance and improvement across the season."
+  },
+  {
+    "objectID": "posts/NFL-Redzone-EPA/index.html#conclusions",
+    "href": "posts/NFL-Redzone-EPA/index.html#conclusions",
+    "title": "Comparing NFL teams EPA from week 3 of the 2022 season to week 9",
+    "section": "Conclusions",
+    "text": "Conclusions\nThe results show clear tiers of red zone efficiency and development as the season has progressed.\nBiggest Improvers: The Philadelphia Eagles stand out as the team that improved the most, jumping from 0 total EPA in Week 3 to over +20 EPA by Week 9. That surge reflects sharper red zone execution, particularly their increased touchdown conversion rate and consistent quarterback play. The Minnesota Vikings and Cleveland Browns also showed notable improvement, moving from slightly negative early-season numbers to strong positive totals by midseason.\nConsistently Strong Teams: The Kansas City Chiefs have been dominant throughout, leading the entire league in total red zone EPA after nine weeks. Their early-season efficiency continued without much regression, showing how stable their offense remains in high-leverage scoring situations. The Baltimore Ravens and Dallas Cowboys also maintained steady, above-average performance in both timeframes.\nTeams That Fell Off: A few teams have seen their red zone performance decline. The Buffalo Bills and Green Bay Packers both started with solid early-season numbers but saw little or no improvement, slipping in overall ranking as other offenses surged ahead.\nConsistent Struggles: At the bottom of the chart, the Denver Broncos, Tampa Bay Buccaneers, and Indianapolis Colts have struggled all season, remaining in negative EPA territory through both Week 3 and Week 9. Their lack of progress indicates deeper offensive inefficiencies, especially in play design and execution near the goal line."
   }
 ]
